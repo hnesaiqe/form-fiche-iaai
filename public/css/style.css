@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+form {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* full size  */
+.input-full{
+    width: -webkit-fill-available;
+}
+
+/* Container information user */
+.contener_form_recap{
+    display: flex;
+    flex-direction: column;
+}
+.containerPlacementFormeInput{
+    display:inline-grid;
+}
+/* Table form */
+
+.table-center{
+    width: 100%;
+    border: 1px solid black;
+}
+.table-center_th{
+    border: 1px solid black;
+}
+
+.table-center_td{
+    border: 1px solid black;
+}
+/* Dimension tableau */
+.width-table-1{
+    width: 15%;
+}
+.width-table-2{
+    width: 20%;
+}.width-table-3{
+    width: 50%;
+}

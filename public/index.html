@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+
+</style>
+</head>
+
+<body>
+    <div class="containerTop">
+        <div class="containerApsolute"></div>
+        <div style="height: 80px;"></div>
+        <div class="container">
+            <div class="containerlocationBlock"></div>
+            <div class="containerform">
+                <div class="divh1">
+                    <h1 class="titleForm">Registration Form</h1>
+                </div>
+                <div class="conaainercompletform">
+                    <div class="containerlocationBlockForm"></div>
+                    <form name="maforme" action="/register" method="POST">
+                        <div class="contener_form_recap">
+                            <div class="containerPlacementFormeInput">
+                                <!-- Projet -->
+                                <label for="ie_projet">projet</label>
+                                <input placeholder="Projet " type="text" id="ie_projet" name="ie_projet" minlength="1"
+                                    maxlength="10" class="input-full" required>
+                            </div>
+                            <div class="containerPlacementFormeInput">
+                                <!-- Nom -->
+                                <label for="ie_name">nom</label>
+                                <input placeholder="Nom " type="text" id="ie_name" name="ie_name" minlength="1"
+                                    maxlength="15" class="input-full" required>
+                            </div>
+                            <div class="containerPlacementFormeInput">
+                                <!-- Prénom -->
+                                <label for="ie_first_name">prénom</label>
+                                <input placeholder="Prénom " type="text" id="ie_first_name" name="ie_first_name"
+                                    minlength="1" maxlength="10" class="input-full" required>
+                            </div>
+                            <div class="containerPlacementFormeInput">
+                                <!--Tribu -->
+                                <label for="ie_tribe_name">tribu</label>
+                                <input placeholder="Tribu " type="text" id="ie_tribe_name" name=" ie_tribe_name"
+                                    minlength="1" maxlength="10" class="input-full" required>
+                            </div>
+                            <div class="containerPlacementFormeInput">
+                                <!-- Phone -->
+                                <label for="ie_phone_number">téléphone</label>
+                                <input placeholder="Votre télèphone dans se format: 97-58-16" type="tel"
+                                    id="ie_phone_number" name="ie_phone_number" minlength="1" maxlength="8"
+                                    pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}" required class="input-full">
+                            </div>
+                            <div class="containerPlacementFormeInput">
+                                <!-- Secteur  -->
+                                <label for="ie_sector">secteur</label>
+                                <input placeholder="Secteur" type="name" id="ie_sector" name="ie_sector"
+                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="input-full" required>
+                            </div>
+                            <div class="containerPlacementFormeInput">
+                                <!-- Objet de la demande -->
+                                <label for="ie_object_request">objet de la demande</label>
+                                <textarea placeholder="Objet de la demande" type="textarea" id="ie_object_request"
+                                    name="ie_object_request" minlength=" 1" maxlength="250" class="input-full" required
+                                    autocomplete="off"></textarea>
+                            </div>
+                            <div class="containerPlacementFormeInput">
+                                <!-- Ridet-->
+                                <label for="ie_ridet">ridet</label>
+                                <input placeholder="Ridet " type="ridet" id="ie_ridet" minlength="4" maxlength="8"
+                                    required autocomplete="off" class="input-full" onchange="passverif()" />
+                            </div>
+                            <div class="containerPlacementFormeInput">
+                                <!-- Ile-->
+                                <label for="ie_isle">ile</label>
+                                <input placeholder="Ile " type="Isle" id="ie_isle" minlength="4" maxlength="8" required
+                                    autocomplete="off" class="input-full" onchange="passverif()" />
+                            </div>
+                        </div>
+                        <div class="contener_form_infoprojet">
+                            <table class="table-center">
+                                <tr>
+                                    <th>Nature / Depense</th>
+                                    <th>Poste</th>
+                                    <th>Total</th>
+                                    <th>Conserner
+                                    <th>
+                                </tr>
+                                <!-- line construcrtor -->
+                                <tr>
+                                    <td class="table-center_td"><input placeholder="Fournisseur" type="text" id="ie_suppliers_constructor"
+                                            minlength="1" maxlength="20" name="ie_suppliers_constructor" required
+                                            autocomplete="off" class="input-full" />
+                                    </td>
+                                    <td class="table-center_td"><input placeholder="Construction, Bâtiment" type="text" id="ie_post_constructor"
+                                            minlength="1" maxlength="20" name="ie_post_constructor" required
+                                            autocomplete="off" class="input-full" />
+                                    </td>
+                                    <td class="table-center_td"><input placeholder="Estimation XPF" type="text" id="ie_estimate_constructor"
+                                            minlength="1" maxlength="20" name="ie_estimate_constructor" required
+                                            autocomplete="off" class="input-full"/>
+                                    </td>
+                                    <td class="table-center_td">
+                                        <input type="checkbox" id="ie_conserve_constructor"
+                                            name="ie_conserve_constructor" class="input-full"/>
+                                    </td>
+                                </tr>
+                                <!-- line technical -->
+                                <tr>
+                                    <td class="table-center_td"><input placeholder="Fournisseur" type="text" id="ie_suppliers_technical"
+                                            minlength="1" maxlength="20" name="ie_suppliers_technical" required
+                                            autocomplete="off" class="input-full" />
+                                    </td>
+                                    <td class="table-center_td"><input placeholder="Matériel Technique" type="text" id="ie_post_technical"
+                                            minlength="1" maxlength="20" name="ie_post_technical" required
+                                            autocomplete="off" class="input-full" />
+                                    </td>
+                                    <td class="table-center_td"><input placeholder="Estimation XPF" type="text" id="ie_estimate_technical"
+                                            minlength="1" maxlength="20" name="ie_estimate_technical" required
+                                            autocomplete="off" class="input-full" />
+                                    </td>
+                                    <td class="table-center_td">
+                                        <input type="checkbox" id="ie_conserve_technical" name="ie_conserve_technical">
+                                    </td>
+                                </tr>
+                                <!-- line works -->
+                                <tr>
+                                    <td class="table-center_td"><input placeholder="Fournisseur" type="text" id="ie_suppliers_works"
+                                            minlength="1" maxlength="20" name="ie_suppliers_works" required
+                                            autocomplete="off" class="input-full" />
+                                    </td>
+                                    <td class="table-center_td"><input placeholder="Travaux et Aménagements" type="text" id="ie_post_works"
+                                            minlength="1" maxlength="20" name="ie_post_works" required
+                                            autocomplete="off" class="input-full" />
+                                    </td>
+                                    <td class="table-center_td"><input placeholder="Estimation XPF" type="text" id="ie_estimate_works"
+                                            minlength="1" maxlength="20" name="ie_estimate_works" required
+                                            autocomplete="off" class="input-full" />
+                                    </td>
+                                    <td class="table-center_td">
+                                        <input type="checkbox" id="ie_conserve_works" name="ie_conserve_works">
+                                    </td>
+                                </tr>
+                                <!-- line transport -->
+                                <tr>
+                                    <td class="table-center_td"><input placeholder="Fournisseur" type="text" id="ie_suppliers_transport"
+                                            minlength="1" maxlength="20" name="ie_suppliers_transport" required
+                                            autocomplete="off" class="input-full" />
+                                    </td>
+                                    <td class="table-center_td"><input placeholder="Matériel de Transport" type="text" id="ie_post_transport"
+                                            minlength="1" maxlength="20" name="ie_post_transport" required
+                                            autocomplete="off" class="input-full" />
+                                    </td>
+                                    <td class="table-center_td"><input placeholder="Estimation XPF" type="text" id="ie_estimate_transport"
+                                            minlength="1" maxlength="20" name="ie_estimate_transport" required
+                                            autocomplete="off" class="input-full" />
+                                    </td>
+                                    <td class="table-center_td">
+                                        <input type="checkbox" id="ie_conserve_transport" name="ie_conserve_transport">
+                                    </td>
+                                </tr>
+                                <!-- line office -->
+                                <tr>
+                                    <td class="table-center_td"><input placeholder="Fournisseur" type="text" id="ie_suppliers_office"
+                                            minlength="1" maxlength="20" name="ie_suppliers_office" required
+                                            autocomplete="off" class="input-full" />
+                                    </td>
+                                    <td class="table-center_td"><input placeholder="Matériel de Bureau" type="text" id="ie_post_office"
+                                            minlength="1" maxlength="20" name="ie_post_office" required
+                                            autocomplete="off" class="input-full" />
+                                    </td>
+                                    <td class="table-center_td"><input placeholder="Estimation XPF" type="text" id="ie_estimate_office"
+                                            minlength="1" maxlength="20" name="ie_estimate_office" required
+                                            autocomplete="off" class="input-full" />
+                                    </td>
+                                    <td class="table-center_td">
+                                        <input type="checkbox" id="ie_conserve_office" name="ie_conserve_office">
+                                    </td>
+                                </tr>
+                                <!-- line furniture -->
+                                <tr>
+                                    <td class="table-center_td"><input placeholder="Fournisseur" type="text" id="ie_suppliers_furnuiture"
+                                            minlength="1" maxlength="20" name="ie_suppliers_furnuiture" required
+                                            autocomplete="off" class="input-full" />
+                                    </td>
+                                    <td class="table-center_td"><input placeholder="Mobilier" type="text" id="ie_post_furnuiture" minlength="1"
+                                            maxlength="20" name="ie_post_furnuiture" required autocomplete="off"
+                                            class="input-full" />
+                                    </td>
+                                    <td class="table-center_td"><input placeholder="Estimation XPF" type="text" id="ie_estimate_furnuiture"
+                                            minlength="1" maxlength="20" name="ie_estimate_furnuiture" required
+                                            autocomplete="off" class="input-full" />
+                                    </td>
+                                    <td class="table-center_td">
+                                        <input type="checkbox" id="ie_conserve_furniture" name="ie_conserve_furniture" >
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- Table 2 -->
+                            <table class="table-center">
+                                <tr>
+                                    <th class="width-table-2"></th>
+                                    <th class="width-table-">SOUS-TOTAL IMMOBILISATIONS CORPORELLES</th>
+                                    <th class="table-center_th width-table-1">0 XPF</th>
+                                    <th class="table-center_th width-table-1">Conserner
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="table-center_td"> <label>XL PROG</label></td>
+                                    <td class="table-center_td">Logiciels Informatique</td>
+                                    <td class="table-center_td">200 000 XPF</td>
+                                    <td class="table-center_td"><input type="checkbox" id="ie_conserve_prog" name="ie_conserve_prog">
+                                    </td> 
+                                </tr>
+                                <tr>
+                                    <td class="table-center_td"> <label>VLC</label></td>
+                                    <td class="table-center_td">Formalités de création et madifications statuts entreprise</td>
+                                    <td class="table-center_td">275 000 XPF</td>
+                                    <td class="table-center_td"><input type="checkbox" id="ie_conserve_prog" name="ie_conserve_prog">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-center_td"> <label>Coutume</label></td>
+                                    <td class="table-center_td"> <label>Estimation du don en nature</label></td>
+                                    <td class="table-center_td"> <input type="text" id="ie_total_coutume" class="input-full"></td>
+                                    <td class="table-center_td"><input type="checkbox" id="ie_conserve_prog" name="ie_conserve_prog">
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- table 3 -->
+                            <table class="table-center">
+                                <tr>
+                                    <th class="width-table-2"></th>
+                                    <th class="width-table-3">SOUS-TOTAL IMMOBILISATIONS INCORPORELLES</th>
+                                    <th class="table-center_th width-table-1">475 000 XPF</th>
+                                    <th class="table-center_th width-table-1">Conserner
+                                    <th>
+                                </tr>
+                                <tr>
+                                    <td class="table-center_td"> <label>BANQUE</label></td>
+                                    <td class="table-center_td"></td>
+                                    <td class="table-center_td">40 000 XPF</td>
+                                    <td class="table-center_td"><input type="checkbox" id="ie_conserve_prog" name="ie_conserve_prog">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-center_td"> <label>EXPERT COMPTABLE</label></td>
+                                    <td class="table-center_td">Expert comptable</td>
+                                    <td class="table-center_td">375 000 XPF</td>
+                                    <td class="table-center_td"><input type="checkbox" id="ie_conserve_prog" name="ie_conserve_prog">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-center_td"> <label>APSYLONE</label></td>
+                                    <td class="table-center_td"> <label>Publicité, site internet, logo</label></td>
+                                    <td class="table-center_td"> <label>350 000 XPF</label></td>
+                                    <td class="table-center_td"><input type="checkbox" id="ie_conserve_prog" name="ie_conserve_prog">
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="table-center">
+                                <tr>
+                                    <th class="width-table-2"></th>
+                                    <th class="width-table-3">SOUS-TOTAL AUTRES FRAIS IMMOBILISES</th>
+                                    <th class="table-center_th width-table-1">765 000 XPF</th>
+                                    <th class="table-center_th width-table-1">Conserner
+                                    <th>
+                                </tr>
+                                <tr>
+                                    <td class="table-center_td "> <label>STOCK</label></td>
+                                    <td class="table-center_td "><label></label></td>
+                                    <td class="table-center_td "><input type="text" id="ie_total_stock" class="input-full"></td>
+                                    <td class="table-center_td "><input type="checkbox" id="ie_conserve_prog" name="ie_conserve_prog" class="input-full">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-center_td "> <label>Trésorerie de départ</label></td>
+                                    <td class="table-center_td "><label></label></td>
+                                    <td class="table-center_td ""><input type="text" id="ie_total_tresorerie" class="input-full"></td>
+                                    <td class="table-center_td "><input type="checkbox" id="ie_conserve_prog" name="ie_conserve_prog" class="input-full">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- checkbox-->
+                        <div class="blockcaseacocher">
+                            <input type="checkbox" id="horns2" name="horns2">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, debitis delectus.
+                                Aut voluptatem.</p>
+                        </div>
+                        <!-- Envoyez -->
+                        <div class="submitbottom">
+                            <input id="submit" type="submit" value="Submit" class="submitClasse">
+                        </div>
+                    </form>
+                    <div class="containerlocationBlockForm"></div>
+                </div>
+            </div>
+            <div class="containerlocationBlock"></div>
+        </div>
+    </div>
+    <script>
+        function passverif() {
+            var pass = document.getElementById('password').value;
+            var vpass = document.getElementById('password2').value;
+            if (pass != vpass) {
+                document.getElementById('submit').setAttribute("disabled", "disabled");
+                document.getElementById('submit').style.background = "linear-gradient(#F79494, #DC1D06)";
+                alert('Attention Mots de passe incorecte ');
+                return false;
+            } else {
+                document.getElementById('submit').style.background = "green";
+                document.getElementById('submit').removeAttribute("disabled");
+            }
+        }
+    </script>
+</body>
+
+</html>
