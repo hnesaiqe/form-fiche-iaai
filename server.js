@@ -10,9 +10,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
-  database: "fiche_iaai",
+  database: "fichier_iaai",
   user: "root",
-  password: " "
+  password: ""
 });
 
 app.post("/register", function(req, res) {
@@ -72,9 +72,9 @@ app.post("/register", function(req, res) {
     ie_post_technical: ie_post_technical,
     ie_estimate_technical: ie_estimate_technical,
     //Recapitulatif works//
-    ie_suppliers_works: ie_suppliers_works,
-    ie_post_works: ie_post_works,
-    ie_estimate_works: ie_estimate_works,
+    ie_suppliers_work: ie_suppliers_work,
+    ie_post_work: ie_post_work,
+    ie_estimate_work: ie_estimate_work,
     //Recapitulatif transport//
     ie_suppliers_transport: ie_suppliers_transport,
     ie_post_transport: ie_post_transport,

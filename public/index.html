@@ -28,8 +28,8 @@
                         <div class="contener_form_recap">
                             <div class="containerPlacementFormeInput">
                                 <!-- Projet -->
-                                <label for="ie_projet">projet</label>
-                                <input placeholder="Projet " type="text" id="ie_projet" name="ie_projet" minlength="1"
+                                <label for="ie_projet_name">projet</label>
+                                <input placeholder="Projet " type="text" id="ie_projet_name" name="ie_projet_name" minlength="1"
                                     maxlength="10" class="input-full" required>
                             </div>
                             <div class="containerPlacementFormeInput">
@@ -47,7 +47,7 @@
                             <div class="containerPlacementFormeInput">
                                 <!--Tribu -->
                                 <label for="ie_tribe_name">tribu</label>
-                                <input placeholder="Tribu " type="text" id="ie_tribe_name" name=" ie_tribe_name"
+                                <input placeholder="Tribu " type="text" id="ie_tribe_name" name="ie_tribe_name"
                                     minlength="1" maxlength="10" class="input-full" required>
                             </div>
                             <div class="containerPlacementFormeInput">
@@ -61,7 +61,7 @@
                                 <!-- Secteur  -->
                                 <label for="ie_sector">secteur</label>
                                 <input placeholder="Secteur" type="name" id="ie_sector" name="ie_sector"
-                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="input-full" required>
+                                     class="input-full" required>
                             </div>
                             <div class="containerPlacementFormeInput">
                                 <!-- Objet de la demande -->
@@ -73,14 +73,14 @@
                             <div class="containerPlacementFormeInput">
                                 <!-- Ridet-->
                                 <label for="ie_ridet">ridet</label>
-                                <input placeholder="Ridet " type="ridet" id="ie_ridet" minlength="4" maxlength="8"
-                                    required autocomplete="off" class="input-full" onchange="passverif()" />
+                                <input placeholder="Ridet " type="ridet" id="ie_ridet" name="ie_ridet" minlength="4" maxlength="8"
+                                    required autocomplete="off" class="input-full"/>
                             </div>
                             <div class="containerPlacementFormeInput">
                                 <!-- Ile-->
                                 <label for="ie_isle">ile</label>
-                                <input placeholder="Ile " type="Isle" id="ie_isle" minlength="4" maxlength="8" required
-                                    autocomplete="off" class="input-full" onchange="passverif()" />
+                                <input placeholder="Ile " type="Isle" id="ie_isle" name="ie_isle" minlength="4" maxlength="8" required
+                                    autocomplete="off" class="input-full"/>
                             </div>
                         </div>
                         <div class="contener_form_infoprojet">
@@ -131,16 +131,16 @@
                                 </tr>
                                 <!-- line works -->
                                 <tr>
-                                    <td class="table-center_td"><input placeholder="Fournisseur" type="text" id="ie_suppliers_works"
-                                            minlength="1" maxlength="20" name="ie_suppliers_works" required
+                                    <td class="table-center_td"><input placeholder="Fournisseur" type="text" id="ie_suppliers_work"
+                                            minlength="1" maxlength="20" name="ie_suppliers_work" required
                                             autocomplete="off" class="input-full" />
                                     </td>
-                                    <td class="table-center_td"><input placeholder="Travaux et Aménagements" type="text" id="ie_post_works"
-                                            minlength="1" maxlength="20" name="ie_post_works" required
+                                    <td class="table-center_td"><input placeholder="Travaux et Aménagements" type="text" id="ie_post_work"
+                                            minlength="1" maxlength="20" name="ie_post_work" required
                                             autocomplete="off" class="input-full" />
                                     </td>
-                                    <td class="table-center_td"><input placeholder="Estimation XPF" type="text" id="ie_estimate_works"
-                                            minlength="1" maxlength="20" name="ie_estimate_works" required
+                                    <td class="table-center_td"><input placeholder="Estimation XPF" type="text" id="ie_estimate_work"
+                                            minlength="1" maxlength="20" name="ie_estimate_work" required
                                             autocomplete="off" class="input-full" />
                                     </td>
                                     <td class="table-center_td">
@@ -185,16 +185,16 @@
                                 </tr>
                                 <!-- line furniture -->
                                 <tr>
-                                    <td class="table-center_td"><input placeholder="Fournisseur" type="text" id="ie_suppliers_furnuiture"
-                                            minlength="1" maxlength="20" name="ie_suppliers_furnuiture" required
+                                    <td class="table-center_td"><input placeholder="Fournisseur" type="text" id="ie_suppliers_furniture"
+                                            minlength="1" maxlength="20" name="ie_suppliers_furniture" required
                                             autocomplete="off" class="input-full" />
                                     </td>
-                                    <td class="table-center_td"><input placeholder="Mobilier" type="text" id="ie_post_furnuiture" minlength="1"
-                                            maxlength="20" name="ie_post_furnuiture" required autocomplete="off"
+                                    <td class="table-center_td"><input placeholder="Mobilier" type="text" id="ie_post_furniture" minlength="1"
+                                            maxlength="20" name="ie_post_furniture" required autocomplete="off"
                                             class="input-full" />
                                     </td>
-                                    <td class="table-center_td"><input placeholder="Estimation XPF" type="text" id="ie_estimate_furnuiture"
-                                            minlength="1" maxlength="20" name="ie_estimate_furnuiture" required
+                                    <td class="table-center_td"><input placeholder="Estimation XPF" type="text" id="ie_estimate_furniture"
+                                            minlength="1" maxlength="20" name="ie_estimate_furniture" required
                                             autocomplete="off" class="input-full" />
                                     </td>
                                     <td class="table-center_td">

@@ -26,12 +26,18 @@ div {
 }
 
 /* Container information user */
+.conaainercompletform{
+width: fit-content;
+
+}
+
 .contener_form_recap{
     display: flex;
     flex-direction: column;
 }
 .containerPlacementFormeInput{
     display:inline-grid;
+
 }
 /* Table form */
 
