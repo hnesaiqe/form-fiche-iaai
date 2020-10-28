@@ -40,6 +40,9 @@ width: fit-content;
 
 }
 /* Table form */
+#contener_form_infoprojet-Id{
+    display: none;
+}
 
 .table-center{
     width: 100%;
